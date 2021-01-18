@@ -1,7 +1,6 @@
 .idea
 .vscode
 package-lock.json
-composer.lock
 /node_modules
 /public/hot
 /public/storage
