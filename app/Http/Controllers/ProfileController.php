@@ -4,40 +4,53 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileRequest;
 use App\Http\Requests\PasswordRequest;
+use App\Models\Photos;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
-    /**
-     * Show the form for editing the profile.
-     *
-     * @return \Illuminate\View\View
-     */
     public function edit()
     {
         return view('profile.edit');
     }
 
-    /**
-     * Update the profile
-     *
-     * @param  \App\Http\Requests\ProfileRequest  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    public function adminedit()
+    {
+        return view('admin.profile.edit');
+    }
+
     public function update(ProfileRequest $request)
     {
-        Auth::user()->update($request->all());
+        if($file = $request->file('img')){
+
+            $name = time() . $file->getClientOriginalName();
+
+            $file->move('images/uploads', $name);
+
+            Photos::where('id', $request->phid)
+                ->update([
+                    'file'=>$name,
+                    'url' => 0
+                ]);
+
+            $input = Photos::where('id', $request->phid)->first();
+
+            User::where('id', $request->usid)
+                ->update(['photo_id'=>$input->id]);
+
+        }
+
+        User::where('id', $request->usid)
+            ->update([
+                'name'=>$request->name,
+                'email'=>$request->email,
+            ]);
 
         return back()->withStatus(__('Profile successfully updated.'));
     }
 
-    /**
-     * Change the password
-     *
-     * @param  \App\Http\Requests\PasswordRequest  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function password(PasswordRequest $request)
     {
 
