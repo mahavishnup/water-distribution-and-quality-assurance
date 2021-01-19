@@ -84,7 +84,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin/home') }}">
+                    <a class="nav-link" href="{{ route('admin.route') }}">
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                     </a>
                 </li>
