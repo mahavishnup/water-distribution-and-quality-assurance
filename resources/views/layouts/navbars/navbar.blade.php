@@ -1,7 +1,9 @@
-@auth()
+@if(\App\Models\User::find(Auth::user()->id)->is_admin == '0')
     @include('layouts.navbars.navs.auth')
-@endauth
-    
+@endif
+@if(\App\Models\User::find(Auth::user()->id)->is_admin == '1')
+    @include('layouts.navbars.navs.admin')
+@endif
 @guest()
     @include('layouts.navbars.navs.guest')
 @endguest
