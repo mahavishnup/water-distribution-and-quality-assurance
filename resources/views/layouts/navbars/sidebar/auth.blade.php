@@ -5,7 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="/">
+        <a class="navbar-brand pt-0" href="/home">
             <img src="{{ '/images/logo/water-distribution.png' }}" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
@@ -58,7 +58,7 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="/">
+                        <a href="/home">
                             <img src="{{ '/images/logo/water-distribution.png' }}" alt="logo">
                         </a>
                     </div>
