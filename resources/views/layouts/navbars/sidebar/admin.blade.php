@@ -89,7 +89,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="admin/quality-assurance">
+                    <a class="nav-link" href="/quality-assurance">
                         <i class="ni ni-single-02"></i>{{ __('Quality Assurance') }}
                     </a>
                 </li>
@@ -102,12 +102,12 @@
                     <div class="collapse show" id="navbar-customer">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/user-request">
+                                <a class="nav-link" href="/user-request">
                                     <i class="ni ni-single-02"></i>{{ __('User Request') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/user-feedback">
+                                <a class="nav-link" href="/user-feedback">
                                     <i class="ni ni-single-02"></i>{{ __('User Feedback') }}
                                 </a>
                             </li>
@@ -123,12 +123,12 @@
                     <div class="collapse show" id="navbar-locations">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/new-location">
+                                <a class="nav-link" href="/new-location">
                                     <i class="ni ni-single-02"></i>{{ __('Create Location') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/locations">
+                                <a class="nav-link" href="/locations">
                                     <i class="ni ni-single-02"></i>{{ __('All Locations') }}
                                 </a>
                             </li>
@@ -144,12 +144,12 @@
                     <div class="collapse show" id="navbar-services">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/new-service">
+                                <a class="nav-link" href="/new-service">
                                     <i class="ni ni-single-02"></i>{{ __('Create Service') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/services">
+                                <a class="nav-link" href="/services">
                                     <i class="ni ni-single-02"></i>{{ __('All Services') }}
                                 </a>
                             </li>
@@ -165,12 +165,12 @@
                     <div class="collapse show" id="navbar-packages">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/new-package">
+                                <a class="nav-link" href="/new-package">
                                     <i class="ni ni-single-02"></i>{{ __('Create Package') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/packages">
+                                <a class="nav-link" href="/packages">
                                     <i class="ni ni-single-02"></i>{{ __('All Packages') }}
                                 </a>
                             </li>
@@ -186,12 +186,12 @@
                     <div class="collapse show" id="navbar-users">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/new-user">
+                                <a class="nav-link" href="{{ route('admin.users.create') }}">
                                     <i class="ni ni-single-02"></i>{{ __('Create User') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/users">
+                                <a class="nav-link" href="{{ route('admin.users.index') }}">
                                     <i class="ni ni-single-02"></i>{{ __('All Users') }}
                                 </a>
                             </li>
