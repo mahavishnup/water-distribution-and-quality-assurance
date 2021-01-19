@@ -89,9 +89,46 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/quality-assurance">
-                        <i class="ni ni-single-02"></i>{{ __('Quality Assurance') }}
+                    <a class="nav-link active" href="#navbar-users" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                        <i class="ni ni-air-baloon" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('User Details') }}</span>
                     </a>
+
+                    <div class="collapse show" id="navbar-users">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.users.create') }}">
+                                    <i class="ni ni-single-02"></i>{{ __('Create User') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.users.index') }}">
+                                    <i class="ni ni-single-02"></i>{{ __('All Users') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#navbar-quality" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                        <i class="ni ni-air-baloon" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Quality Assurances') }}</span>
+                    </a>
+
+                    <div class="collapse show" id="navbar-quality">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.quality.create') }}">
+                                    <i class="ni ni-single-02"></i>{{ __('Create Quality') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.quality.index') }}">
+                                    <i class="ni ni-single-02"></i>{{ __('All Quality') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#navbar-customer" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
@@ -102,12 +139,12 @@
                     <div class="collapse show" id="navbar-customer">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/user-request">
+                                <a class="nav-link" href="{{ route('admin.request.index') }}">
                                     <i class="ni ni-single-02"></i>{{ __('User Request') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/user-feedback">
+                                <a class="nav-link" href="{{ route('admin.feedback.index') }}">
                                     <i class="ni ni-single-02"></i>{{ __('User Feedback') }}
                                 </a>
                             </li>
@@ -172,27 +209,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/packages">
                                     <i class="ni ni-single-02"></i>{{ __('All Packages') }}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-users" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
-                        <i class="ni ni-air-baloon" style="color: #f4645f;"></i>
-                        <span class="nav-link-text" style="color: #f4645f;">{{ __('User Details') }}</span>
-                    </a>
-
-                    <div class="collapse show" id="navbar-users">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.users.create') }}">
-                                    <i class="ni ni-single-02"></i>{{ __('Create User') }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.users.index') }}">
-                                    <i class="ni ni-single-02"></i>{{ __('All Users') }}
                                 </a>
                             </li>
                         </ul>
