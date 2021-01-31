@@ -13,4 +13,20 @@ class CustomerRequestController extends Controller
 
         return view("admin.customer.request", compact("customerrequest"));
     }
+
+    public function show($id)
+    {
+        $CustomerRequest = CustomerRequest::findOrFail($id);
+
+        return view("customer.request", compact('CustomerRequest'));
+    }
+
+    public function destroy(Request $request, $id)
+    {
+        $deleted_at = $request->deleted_at;
+
+        CustomerRequest::where('id', $id)->update(['deleted_at' => $deleted_at]);
+
+        return back()->withStatus(__('Delete successfully.'));
+    }
 }

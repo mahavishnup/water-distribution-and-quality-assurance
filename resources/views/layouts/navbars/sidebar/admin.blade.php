@@ -94,7 +94,7 @@
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('User Details') }}</span>
                     </a>
 
-                    <div class="collapse show" id="navbar-users">
+                    <div class="collapse" id="navbar-users">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.users.create') }}">
@@ -115,7 +115,7 @@
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Quality Assurances') }}</span>
                     </a>
 
-                    <div class="collapse show" id="navbar-quality">
+                    <div class="collapse" id="navbar-quality">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.quality.create') }}">
@@ -136,7 +136,7 @@
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Customers') }}</span>
                     </a>
 
-                    <div class="collapse show" id="navbar-customer">
+                    <div class="collapse" id="navbar-customer">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.request.index') }}">
@@ -157,16 +157,37 @@
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Locations') }}</span>
                     </a>
 
-                    <div class="collapse show" id="navbar-locations">
+                    <div class="collapse" id="navbar-locations">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/new-location">
+                                <a class="nav-link" href="{{ route('admin.location.create') }}">
                                     <i class="ni ni-single-02"></i>{{ __('Create Location') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/locations">
+                                <a class="nav-link" href="{{ route('admin.location.index') }}">
                                     <i class="ni ni-single-02"></i>{{ __('All Locations') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#navbar-track" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                        <i class="ni ni-air-baloon" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Tracking') }}</span>
+                    </a>
+
+                    <div class="collapse" id="navbar-track">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.tracking.create') }}">
+                                    <i class="ni ni-single-02"></i>{{ __('Create Tracking') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.tracking.index') }}">
+                                    <i class="ni ni-single-02"></i>{{ __('All Tracking') }}
                                 </a>
                             </li>
                         </ul>
@@ -178,15 +199,15 @@
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Services') }}</span>
                     </a>
 
-                    <div class="collapse show" id="navbar-services">
+                    <div class="collapse" id="navbar-services">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/new-service">
+                                <a class="nav-link" href="{{ route('admin.service.create') }}">
                                     <i class="ni ni-single-02"></i>{{ __('Create Service') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/services">
+                                <a class="nav-link" href="{{ route('admin.service.index') }}">
                                     <i class="ni ni-single-02"></i>{{ __('All Services') }}
                                 </a>
                             </li>
@@ -199,15 +220,15 @@
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Packages') }}</span>
                     </a>
 
-                    <div class="collapse show" id="navbar-packages">
+                    <div class="collapse" id="navbar-packages">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/new-package">
+                                <a class="nav-link" href="{{ route('admin.package.create') }}">
                                     <i class="ni ni-single-02"></i>{{ __('Create Package') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/packages">
+                                <a class="nav-link" href="{{ route('admin.package.index') }}">
                                     <i class="ni ni-single-02"></i>{{ __('All Packages') }}
                                 </a>
                             </li>

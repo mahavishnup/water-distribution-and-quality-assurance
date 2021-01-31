@@ -13,4 +13,20 @@ class CustomerFeedbackController extends Controller
 
         return view("admin.customer.feedback", compact("customerfeedback"));
     }
+
+    public function show($id)
+    {
+        $customerfeedback = CustomerFeedback::findOrFail($id);
+
+        return view("customer.feedback", compact('customerfeedback'));
+    }
+
+    public function destroy(Request $request, $id)
+    {
+        $deleted_at = $request->deleted_at;
+
+        CustomerFeedback::where('id', $id)->update(['deleted_at' => $deleted_at]);
+
+        return back()->withStatus(__('Delete successfully.'));
+    }
 }

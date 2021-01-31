@@ -97,12 +97,12 @@
                     <div class="collapse show" id="navbar-tankers">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/recent-tanker">
+                                <a class="nav-link" href="{{ url('/tanker') }}/{{Auth::user()->id}}">
                                     <i class="ni ni-single-02"></i>{{ __('Booked Tanker') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/tankers">
+                                <a class="nav-link" href="{{ route('tanker.index') }}">
                                     <i class="ni ni-single-02"></i>{{ __('All Tanker') }}
                                 </a>
                             </li>
@@ -118,13 +118,29 @@
                     <div class="collapse show" id="navbar-harvest">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/recent-harvest">
+                                <a class="nav-link" href="{{ url('/harvest') }}/{{Auth::user()->id}}">
                                     <i class="ni ni-single-02"></i>{{ __('Booked Harvest') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/harvests">
+                                <a class="nav-link" href="{{ route('harvest.index') }}">
                                     <i class="ni ni-single-02"></i>{{ __('All Harvest Pits') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#navbar-track" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                        <i class="ni ni-air-baloon" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Tracking') }}</span>
+                    </a>
+
+                    <div class="collapse show" id="navbar-track">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/track') }}/{{Auth::user()->id}}">
+                                    <i class="ni ni-single-02"></i>{{ __('Track') }}
                                 </a>
                             </li>
                         </ul>

@@ -25,9 +25,9 @@ class QualityController extends Controller
 
     public function show($slug)
     {
-        return $Quality = Quality::findBySlugOrFail($slug);
+        $Quality = Quality::findBySlugOrFail($slug);
 
-//        return view("quality.show", compact('Quality'));
+        return view("quality.show", compact('Quality'));
     }
 
     public function edit($slug)
